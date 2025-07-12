@@ -16,8 +16,8 @@ machine-learning-guide/
 │   ├── naive_bayes/        # 朴素贝叶斯
 │   ├── linear_regression/  # 线性回归
 │   ├── logistic_regression/ # 逻辑回归
-│   ├── svm/                # 支持向量机
 │   ├── clustering/         # 聚类算法
+│   ├── pca/                # 主成分分析
 │   └── recommendation/     # 推荐系统
 └── examples/               # 使用示例
 ```
@@ -103,8 +103,8 @@ pip install -r requirements.txt
 3. 探索朴素贝叶斯，理解概率分类
 4. 掌握线性回归，进入回归分析
 5. 学习逻辑回归，理解分类与回归的联系
-6. 深入 SVM，理解核函数和边界优化
-7. 实践聚类算法，掌握无监督学习
+6. 实践 K-means 聚类，掌握无监督学习
+7. 学习 PCA 降维，理解数据的主要变化方向
 8. 构建推荐系统，综合运用多种技术
 
 ## 贡献

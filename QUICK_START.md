@@ -19,6 +19,9 @@ python algorithms/knn/dating_example.py
 python algorithms/decision_tree/contact_lens_example.py
 python algorithms/naive_bayes/spam_filter_example.py
 python algorithms/linear_regression/linear_regression.py
+python algorithms/logistic_regression/colic_example.py
+python algorithms/clustering/customer_segmentation_example.py
+python algorithms/pca/dimensionality_reduction_example.py
 python algorithms/recommendation/collaborative_filtering.py
 ```
 
@@ -33,7 +36,10 @@ python algorithms/recommendation/collaborative_filtering.py
 ### 进阶路径
 
 4. **线性回归** - 进入回归分析领域
-5. **推荐系统** - 综合应用多种技术
+5. **逻辑回归** - 学习概率分类方法
+6. **K-means 聚类** - 无监督学习入门
+7. **主成分分析** - 数据降维和可视化
+8. **推荐系统** - 综合应用多种技术
 
 ## 🎯 案例介绍
 
@@ -73,7 +79,34 @@ python algorithms/recommendation/collaborative_filtering.py
   - 掌握回归评估指标
 - **运行**: `python algorithms/linear_regression/linear_regression.py`
 
-### 5. 推荐系统
+### 5. 逻辑回归
+
+- **案例**: 疝气病症预测
+- **学习目标**:
+  - 理解 Sigmoid 函数
+  - 学习梯度上升算法
+  - 掌握二分类评估指标
+- **运行**: `python algorithms/logistic_regression/colic_example.py`
+
+### 6. K-means 聚类
+
+- **案例**: 客户细分分析
+- **学习目标**:
+  - 理解无监督学习
+  - 学习聚类评估方法
+  - 掌握肘部法则选择 K 值
+- **运行**: `python algorithms/clustering/customer_segmentation_example.py`
+
+### 7. 主成分分析（PCA）
+
+- **案例**: 数据降维和可视化
+- **学习目标**:
+  - 理解线性降维原理
+  - 学习特征值分解
+  - 掌握方差解释和数据压缩
+- **运行**: `python algorithms/pca/dimensionality_reduction_example.py`
+
+### 8. 推荐系统
 
 - **案例**: 协同过滤电影推荐
 - **学习目标**:
@@ -97,6 +130,9 @@ machine-learning-guide/
 │   ├── decision_tree/         # 决策树
 │   ├── naive_bayes/           # 朴素贝叶斯
 │   ├── linear_regression/     # 线性回归
+│   ├── logistic_regression/   # 逻辑回归
+│   ├── clustering/            # 聚类算法
+│   ├── pca/                   # 主成分分析
 │   └── recommendation/        # 推荐系统
 └── examples/                  # 使用示例
     └── run_all_examples.py    # 运行所有案例
@@ -146,6 +182,9 @@ lr = LinearRegression(learning_rate=0.001, max_iterations=2000)
 | 决策树     | 中       | 快       | 低       | 高       |
 | 朴素贝叶斯 | 快       | 快       | 低       | 中       |
 | 线性回归   | 中       | 快       | 低       | 高       |
+| 逻辑回归   | 中       | 快       | 低       | 高       |
+| K-means    | 中       | 快       | 中       | 中       |
+| PCA        | 中       | 快       | 低       | 低       |
 | 协同过滤   | 中       | 中       | 中       | 中       |
 
 ## 🎨 可视化功能

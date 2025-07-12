@@ -85,6 +85,54 @@ def run_recommendation_example():
     print("推荐系统案例完成")
     print("="*60)
 
+def run_logistic_regression_example():
+    """运行逻辑回归案例"""
+    print("="*60)
+    print("运行逻辑回归案例：疝气病症预测")
+    print("="*60)
+    
+    try:
+        from algorithms.logistic_regression.colic_example import main as lr_main
+        lr_main()
+    except Exception as e:
+        print(f"运行逻辑回归案例时出错: {e}")
+    
+    print("\n" + "="*60)
+    print("逻辑回归案例完成")
+    print("="*60)
+
+def run_clustering_example():
+    """运行聚类算法案例"""
+    print("="*60)
+    print("运行聚类算法案例：K-means客户细分")
+    print("="*60)
+    
+    try:
+        from algorithms.clustering.customer_segmentation_example import main as cluster_main
+        cluster_main()
+    except Exception as e:
+        print(f"运行聚类算法案例时出错: {e}")
+    
+    print("\n" + "="*60)
+    print("聚类算法案例完成")
+    print("="*60)
+
+def run_pca_example():
+    """运行PCA降维案例"""
+    print("="*60)
+    print("运行PCA降维案例：主成分分析")
+    print("="*60)
+    
+    try:
+        from algorithms.pca.dimensionality_reduction_example import main as pca_main
+        pca_main()
+    except Exception as e:
+        print(f"运行PCA案例时出错: {e}")
+    
+    print("\n" + "="*60)
+    print("PCA案例完成")
+    print("="*60)
+
 def show_algorithm_summary():
     """显示算法总结"""
     print("\n" + "="*80)
@@ -119,6 +167,27 @@ def show_algorithm_summary():
             'description': '预测连续数值的回归算法',
             'advantages': ['简单快速', '可解释性强', '无需调参'],
             'disadvantages': ['假设线性关系', '对异常值敏感', '特征选择重要']
+        },
+        {
+            'name': '逻辑回归',
+            'case': '疝气病症预测',
+            'description': '基于Sigmoid函数的二分类算法',
+            'advantages': ['输出概率解释', '不需要调参', '不容易过拟合'],
+            'disadvantages': ['假设线性关系', '对异常值敏感', '需要特征缩放']
+        },
+        {
+            'name': 'K-means聚类',
+            'case': '客户细分分析',
+            'description': '基于距离的无监督聚类算法',
+            'advantages': ['简单高效', '适用于球形簇', '可扩展性好'],
+            'disadvantages': ['需要预设K值', '对初始化敏感', '假设球形分布']
+        },
+        {
+            'name': '主成分分析 (PCA)',
+            'case': '数据降维和可视化',
+            'description': '线性降维技术，保留主要变化方向',
+            'advantages': ['降低维度', '去除噪声', '数据压缩'],
+            'disadvantages': ['线性假设', '主成分难解释', '信息丢失']
         },
         {
             'name': '协同过滤',
@@ -165,12 +234,15 @@ def main():
         print("2. 决策树 (隐形眼镜类型预测)")
         print("3. 朴素贝叶斯 (垃圾邮件分类)")
         print("4. 线性回归 (房价预测)")
-        print("5. 推荐系统 (协同过滤)")
-        print("6. 运行所有案例")
-        print("7. 显示算法总结")
+        print("5. 逻辑回归 (疝气病症预测)")
+        print("6. K-means聚类 (客户细分)")
+        print("7. PCA降维 (数据降维)")
+        print("8. 推荐系统 (协同过滤)")
+        print("9. 运行所有案例")
+        print("10. 显示算法总结")
         print("0. 退出")
         
-        choice = input("\n请输入选择 (0-7): ").strip()
+        choice = input("\n请输入选择 (0-10): ").strip()
         
         if choice == '0':
             print("感谢使用！")
@@ -184,16 +256,25 @@ def main():
         elif choice == '4':
             run_linear_regression_example()
         elif choice == '5':
-            run_recommendation_example()
+            run_logistic_regression_example()
         elif choice == '6':
+            run_clustering_example()
+        elif choice == '7':
+            run_pca_example()
+        elif choice == '8':
+            run_recommendation_example()
+        elif choice == '9':
             print("开始运行所有案例...")
             run_knn_example()
             run_decision_tree_example()
             run_naive_bayes_example()
             run_linear_regression_example()
+            run_logistic_regression_example()
+            run_clustering_example()
+            run_pca_example()
             run_recommendation_example()
             print("\n所有案例运行完成！")
-        elif choice == '7':
+        elif choice == '10':
             show_algorithm_summary()
         else:
             print("无效选择，请重新输入")
