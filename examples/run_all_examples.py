@@ -133,6 +133,54 @@ def run_pca_example():
     print("PCA案例完成")
     print("="*60)
 
+def run_svm_example():
+    """运行SVM案例"""
+    print("="*60)
+    print("运行SVM案例：手写数字识别")
+    print("="*60)
+    
+    try:
+        from algorithms.svm.handwritten_digits_example import main as svm_main
+        svm_main()
+    except Exception as e:
+        print(f"运行SVM案例时出错: {e}")
+    
+    print("\n" + "="*60)
+    print("SVM案例完成")
+    print("="*60)
+
+def run_adaboost_example():
+    """运行AdaBoost案例"""
+    print("="*60)
+    print("运行AdaBoost案例：弱分类器集成")
+    print("="*60)
+    
+    try:
+        from algorithms.adaboost.weak_classifier_example import main as ada_main
+        ada_main()
+    except Exception as e:
+        print(f"运行AdaBoost案例时出错: {e}")
+    
+    print("\n" + "="*60)
+    print("AdaBoost案例完成")
+    print("="*60)
+
+def run_apriori_example():
+    """运行Apriori案例"""
+    print("="*60)
+    print("运行Apriori案例：购物篮分析")
+    print("="*60)
+    
+    try:
+        from algorithms.apriori.market_basket_example import main as apriori_main
+        apriori_main()
+    except Exception as e:
+        print(f"运行Apriori案例时出错: {e}")
+    
+    print("\n" + "="*60)
+    print("Apriori案例完成")
+    print("="*60)
+
 def show_algorithm_summary():
     """显示算法总结"""
     print("\n" + "="*80)
@@ -190,6 +238,27 @@ def show_algorithm_summary():
             'disadvantages': ['线性假设', '主成分难解释', '信息丢失']
         },
         {
+            'name': '支持向量机 (SVM)',
+            'case': '手写数字识别',
+            'description': '通过最大间隔超平面进行分类',
+            'advantages': ['处理高维数据', '核函数处理非线性', '泛化能力强'],
+            'disadvantages': ['参数敏感', '计算复杂度高', '难以解释']
+        },
+        {
+            'name': 'AdaBoost',
+            'case': '弱分类器集成',
+            'description': '自适应提升算法，组合弱分类器',
+            'advantages': ['提升弱分类器', '不易过拟合', '自动特征选择'],
+            'disadvantages': ['对噪声敏感', '训练时间长', '参数调优复杂']
+        },
+        {
+            'name': 'Apriori算法',
+            'case': '购物篮分析',
+            'description': '挖掘频繁项集和关联规则',
+            'advantages': ['发现隐藏模式', '解释性强', '适用于推荐'],
+            'disadvantages': ['计算复杂度高', '内存消耗大', '参数敏感']
+        },
+        {
             'name': '协同过滤',
             'case': '电影推荐系统',
             'description': '基于用户行为的推荐算法',
@@ -237,12 +306,15 @@ def main():
         print("5. 逻辑回归 (疝气病症预测)")
         print("6. K-means聚类 (客户细分)")
         print("7. PCA降维 (数据降维)")
-        print("8. 推荐系统 (协同过滤)")
-        print("9. 运行所有案例")
-        print("10. 显示算法总结")
+        print("8. SVM (手写数字识别)")
+        print("9. AdaBoost (弱分类器集成)")
+        print("10. Apriori (购物篮分析)")
+        print("11. 推荐系统 (协同过滤)")
+        print("12. 运行所有案例")
+        print("13. 显示算法总结")
         print("0. 退出")
         
-        choice = input("\n请输入选择 (0-10): ").strip()
+        choice = input("\n请输入选择 (0-13): ").strip()
         
         if choice == '0':
             print("感谢使用！")
@@ -262,8 +334,14 @@ def main():
         elif choice == '7':
             run_pca_example()
         elif choice == '8':
-            run_recommendation_example()
+            run_svm_example()
         elif choice == '9':
+            run_adaboost_example()
+        elif choice == '10':
+            run_apriori_example()
+        elif choice == '11':
+            run_recommendation_example()
+        elif choice == '12':
             print("开始运行所有案例...")
             run_knn_example()
             run_decision_tree_example()
@@ -272,9 +350,12 @@ def main():
             run_logistic_regression_example()
             run_clustering_example()
             run_pca_example()
+            run_svm_example()
+            run_adaboost_example()
+            run_apriori_example()
             run_recommendation_example()
             print("\n所有案例运行完成！")
-        elif choice == '10':
+        elif choice == '13':
             show_algorithm_summary()
         else:
             print("无效选择，请重新输入")

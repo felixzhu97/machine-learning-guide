@@ -18,6 +18,9 @@ machine-learning-guide/
 │   ├── logistic_regression/ # 逻辑回归
 │   ├── clustering/         # 聚类算法
 │   ├── pca/                # 主成分分析
+│   ├── svm/                # 支持向量机
+│   ├── adaboost/           # AdaBoost元算法
+│   ├── apriori/            # Apriori关联规则
 │   └── recommendation/     # 推荐系统
 └── examples/               # 使用示例
 ```
@@ -105,7 +108,10 @@ pip install -r requirements.txt
 5. 学习逻辑回归，理解分类与回归的联系
 6. 实践 K-means 聚类，掌握无监督学习
 7. 学习 PCA 降维，理解数据的主要变化方向
-8. 构建推荐系统，综合运用多种技术
+8. 深入 SVM，理解核函数和边界优化
+9. 掌握 AdaBoost，学习集成学习方法
+10. 实践 Apriori，挖掘关联规则和模式
+11. 构建推荐系统，综合运用多种技术
 
 ## 贡献
 

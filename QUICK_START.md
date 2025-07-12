@@ -22,6 +22,9 @@ python algorithms/linear_regression/linear_regression.py
 python algorithms/logistic_regression/colic_example.py
 python algorithms/clustering/customer_segmentation_example.py
 python algorithms/pca/dimensionality_reduction_example.py
+python algorithms/svm/handwritten_digits_example.py
+python algorithms/adaboost/weak_classifier_example.py
+python algorithms/apriori/market_basket_example.py
 python algorithms/recommendation/collaborative_filtering.py
 ```
 
@@ -39,7 +42,10 @@ python algorithms/recommendation/collaborative_filtering.py
 5. **逻辑回归** - 学习概率分类方法
 6. **K-means 聚类** - 无监督学习入门
 7. **主成分分析** - 数据降维和可视化
-8. **推荐系统** - 综合应用多种技术
+8. **支持向量机** - 掌握核函数技巧
+9. **AdaBoost** - 集成学习方法
+10. **Apriori** - 关联规则挖掘
+11. **推荐系统** - 综合应用多种技术
 
 ## 🎯 案例介绍
 
@@ -106,7 +112,34 @@ python algorithms/recommendation/collaborative_filtering.py
   - 掌握方差解释和数据压缩
 - **运行**: `python algorithms/pca/dimensionality_reduction_example.py`
 
-### 8. 推荐系统
+### 8. 支持向量机（SVM）
+
+- **案例**: 手写数字识别
+- **学习目标**:
+  - 理解最大间隔原理
+  - 学习核函数技巧
+  - 掌握 SMO 算法
+- **运行**: `python algorithms/svm/handwritten_digits_example.py`
+
+### 9. AdaBoost 元算法
+
+- **案例**: 弱分类器集成
+- **学习目标**:
+  - 理解集成学习原理
+  - 学习自适应提升方法
+  - 掌握权重更新机制
+- **运行**: `python algorithms/adaboost/weak_classifier_example.py`
+
+### 10. Apriori 算法
+
+- **案例**: 购物篮分析
+- **学习目标**:
+  - 理解关联规则挖掘
+  - 学习频繁项集生成
+  - 掌握支持度和置信度
+- **运行**: `python algorithms/apriori/market_basket_example.py`
+
+### 11. 推荐系统
 
 - **案例**: 协同过滤电影推荐
 - **学习目标**:
@@ -133,6 +166,9 @@ machine-learning-guide/
 │   ├── logistic_regression/   # 逻辑回归
 │   ├── clustering/            # 聚类算法
 │   ├── pca/                   # 主成分分析
+│   ├── svm/                   # 支持向量机
+│   ├── adaboost/              # AdaBoost元算法
+│   ├── apriori/               # Apriori关联规则
 │   └── recommendation/        # 推荐系统
 └── examples/                  # 使用示例
     └── run_all_examples.py    # 运行所有案例
@@ -185,6 +221,9 @@ lr = LinearRegression(learning_rate=0.001, max_iterations=2000)
 | 逻辑回归   | 中       | 快       | 低       | 高       |
 | K-means    | 中       | 快       | 中       | 中       |
 | PCA        | 中       | 快       | 低       | 低       |
+| SVM        | 慢       | 快       | 中       | 低       |
+| AdaBoost   | 慢       | 中       | 中       | 中       |
+| Apriori    | 慢       | 快       | 高       | 高       |
 | 协同过滤   | 中       | 中       | 中       | 中       |
 
 ## 🎨 可视化功能
